@@ -32,10 +32,10 @@ export default function About() {
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "50+", icon: <FiBriefcase /> },
-    { label: "Happy Clients", value: "35+", icon: <FiUser /> },
-    { label: "Years Experience", value: "5+", icon: <FiCalendar /> },
-    { label: "Awards Won", value: "12", icon: <FiAward /> },
+    { label: "Projects Completed", value: "10+", icon: <FiBriefcase /> },
+    { label: "Happy Clients", value: "5+", icon: <FiUser /> },
+    { label: "Years Experience", value: "2+", icon: <FiCalendar /> },
+    { label: "Awards Won", value: "10", icon: <FiAward /> },
   ];
 
   return (
@@ -79,7 +79,7 @@ export default function About() {
                 <div className="flex items-center text-text-muted">
                   <FiBriefcase className="mr-3 text-primary" />
                   <span className="font-medium mr-2">Position:</span>
-                  <span>Junior Developer</span>
+                  <span>Frontend Developer</span>
                 </div>
                 <div className="flex items-center text-text-muted">
                   <FiMapPin className="mr-3 text-primary" />
