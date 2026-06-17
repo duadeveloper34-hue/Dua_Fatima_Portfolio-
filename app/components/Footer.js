@@ -13,7 +13,7 @@ export default function Footer() {
               Portfolio.
             </a>
             <p className="text-text-muted text-sm mt-2">
-              Crafting digital experiences since {currentYear - 3}
+              Crafting digital experiences since {currentYear - 2}
             </p>
           </div>
           
