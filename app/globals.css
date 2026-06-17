@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Removed invalid @custom-variant at-rule */
+
+:root {
+  /* Custom color palette for brownish-purple/gray and yellow theme */
+  --color-background: hsl(260 10% 12%);
+  --color-surface: hsl(260 12% 18%);
+  --color-primary: hsl(45 90% 55%);
+  --color-primary-dark: hsl(45 90% 45%);
+  --color-secondary: hsl(260 15% 25%);
+  --color-text: hsl(0 0% 90%);
+  --color-text-muted: hsl(260 10% 70%);
+  --color-border: hsl(260 15% 30%);
+  --color-accent: hsl(280 20% 35%);
+  
+  /* Gradient definitions */
+  --gradient-primary: linear-gradient(to right, hsl(45 90% 55%), hsl(30 90% 65%));
+  --gradient-surface: linear-gradient(to bottom right, hsl(260 12% 18%), hsl(260 15% 22%));
+}
+
+@layer base {
+  :root {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-background);
+  }
+  
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: rgba(38, 35, 45, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
