@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
 
           {/* Hero Image */}
-          <div className="lg:w-1/2">
+          <div>
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
 
