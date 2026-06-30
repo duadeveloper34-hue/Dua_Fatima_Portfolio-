@@ -11,7 +11,7 @@ export const projects= [
      title: "Ai Content Hub",
      description: "Mobile-first fitness tracking application with AI-powered recommendations",
      tags: ["React.js", "Tailwind CSS" , "Next.js"],
-     image: "from-purple-600 to-accent",
+     image: "/content.jpg",
      github: "https://github.com/duadeveloper34-hue/-aicontenthub",
      live: "https://aicontenthub-rho.vercel.app/",
    },
