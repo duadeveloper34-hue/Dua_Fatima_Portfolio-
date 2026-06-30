@@ -1,20 +1,24 @@
-export const projects= [ 
-     {
+export const projects = [
+  {
+    id: 1,
     title: "E-commerce  Website",
     description: "A modern e-commerce solution with real-time inventory and payment integration",
     tags: ["Next.js", "React.js", "Stripe"],
     image: "/web1.jpeg",
     github: "https://github.com/duadeveloper34-hue/ecommerce.website",
     live: "https://ecommerce-website-oaaoxscj2-duafatimas-projects.vercel.app/",
+    year: 2025,
   },
   {
-     title: "Ai Content Hub",
-     description: "Mobile-first fitness tracking application with AI-powered recommendations",
-     tags: ["React.js", "Tailwind CSS" , "Next.js"],
-     image: "/content.jpg",
-     github: "https://github.com/duadeveloper34-hue/-aicontenthub",
-     live: "https://aicontenthub-rho.vercel.app/",
-   },
+    id: 2,
+    title: "Ai Content Hub",
+    description: "Mobile-first fitness tracking application with AI-powered recommendations",
+    tags: ["React.js", "Tailwind CSS", "Next.js"],
+    image: "/content.jpg",
+    github: "https://github.com/duadeveloper34-hue/-aicontenthub",
+    live: "https://aicontenthub-rho.vercel.app/",
+    year: 2026,
+  },
   // {
   //   title: "Design System Library",
   //   description: "Comprehensive component library for enterprise applications",
