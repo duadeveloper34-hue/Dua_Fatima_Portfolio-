@@ -7,14 +7,14 @@ export const projects= [
     github: "https://github.com/duadeveloper34-hue/ecommerce.website",
     live: "https://ecommerce-website-oaaoxscj2-duafatimas-projects.vercel.app/",
   },
-  // {
-  //   title: "Health & Fitness App",
-  //   description: "Mobile-first fitness tracking application with AI-powered recommendations",
-  //   tags: ["React Native", "Firebase", "TensorFlow.js", "GraphQL"],
-  //   imageColor: "from-purple-600 to-accent",
-  //   github: "#",
-  //   live: "#",
-  // },
+  {
+     title: "Ai Content Hub",
+     description: "Mobile-first fitness tracking application with AI-powered recommendations",
+     tags: ["React.js", "Tailwind CSS" , "Next.js"],
+     image: "from-purple-600 to-accent",
+     github: "https://github.com/duadeveloper34-hue/-aicontenthub",
+     live: "https://aicontenthub-rho.vercel.app/",
+   },
   // {
   //   title: "Design System Library",
   //   description: "Comprehensive component library for enterprise applications",
