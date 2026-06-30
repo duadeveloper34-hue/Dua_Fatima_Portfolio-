@@ -1,9 +1,9 @@
 // app/components/Projects.js
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { projects } from "@/data"; 
+import { projects } from "@/data";
 
 export default function Projects() {
-  return ( 
+  return (
     <section id="projects" className="py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
@@ -16,17 +16,17 @@ export default function Projects() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (  
+          {projects.map((project) => (
             <div
-              key={project.title}
+              key={project.id}
               className="group glass-effect rounded-2xl p-6 hover:transform hover:-translate-y-2 transition-all duration-300"
             >
               <div className="mb-6">
-                <div className={`h-52 rounded-xl bg-linear-to-br ${project.image} mb-4 relative  overflow-hidden`}>
+                <div className={`h-48 rounded-xl bg-gradient-to-br ${project.imageColor} mb-4 relative overflow-hidden`}>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-4xl font-bold text-white ">
-                      { project.image && (<img src={project.image} alt={project.title} className="object-cover w-full h-54" />) }
-                      {/* {String(index + 1).padStart(2, '0')} */}
+                       { project.image && (<img src={project.image} alt={project.title} className="object-cover w-full h-54" />) }
+                      {/* {String(project.id).padStart(2, '0')} */}
                     </div>
                   </div>
                 </div>
@@ -53,35 +53,38 @@ export default function Projects() {
               
               <div className="flex items-center justify-between pt-4 border-t border-border">
                 <div className="flex items-center space-x-4">
-                  <a target="_blank"
-                    href="https://github.com/duadeveloper34-hue/ecommerce.website"
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center text-text-muted hover:text-primary transition-colors"
-                    aria-label="GitHub repository"
+                    aria-label={`${project.title} GitHub repository`}
                   >
                     <FiGithub className="w-5 h-5 mr-2" />
                     Code
                   </a>
-                  <a target="_blank" 
-                    href="https://ecommerce-website-oaaoxscj2-duafatimas-projects.vercel.app/"
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center text-text-muted hover:text-primary transition-colors"
-                    aria-label="Live demo"
+                    aria-label={`${project.title} live demo`}
                   >
-                    <FiExternalLink className="w-5 h-5 mr-2"  />
+                    <FiExternalLink className="w-5 h-5 mr-2" />
                     Live Demo
                   </a>
                 </div>
                 <span className="text-sm text-text-muted">
-                  {2025 - index}
+                  {project.year}
                 </span>
               </div>
             </div>
-           ))}
-
+          ))}
         </div>
         
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="/projects"
             className="inline-flex items-center px-6 py-3 rounded-lg border border-border hover:bg-surface transition-colors duration-200 font-medium"
           >
             View All Projects
