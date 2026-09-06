@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dua Fatima — Frontend Developer Portfolio
 
-## Getting Started
+Built with Next.js (App Router), JavaScript, Tailwind CSS v4, Motion,
+React Hook Form, React Hot Toast, and Nodemailer.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in your real SMTP values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setting up the contact form email (Nodemailer + Gmail)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The contact form sends mail through `app/api/contact/route.js` using
+Nodemailer, and delivers to `duaf3292@gmail.com`. To make it work:
 
-## Learn More
+1. Turn on 2-Step Verification on the Gmail account, if it isn't already:
+   https://myaccount.google.com/security
+2. Create an App Password: https://myaccount.google.com/apppasswords
+3. Copy `.env.example` to `.env.local` and fill in:
+   - `SMTP_HOST=smtp.gmail.com`
+   - `SMTP_PORT=465`
+   - `SMTP_USER=duaf3292@gmail.com`
+   - `SMTP_PASSWORD=` the app password from step 2 (not the regular
+     Gmail password)
+   - `CONTACT_EMAIL=duaf3292@gmail.com`
+4. Restart the dev server after editing `.env.local`.
 
-To learn more about Next.js, take a look at the following resources:
+`.env.local` is already in `.gitignore` — never commit real
+credentials.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## What still needs your input
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `public/images/dua-fatima.png` — your photo is already in place here.
+- `data/projects.js` — one real project (AI Content Hub) is filled in;
+  the rest are placeholders marked `PLACEHOLDER` — swap in your real
+  projects and screenshots (drop images into `public/images/projects/`
+  and point `image` at them, or leave the built-in placeholder tile).
+- `data/experience.js` — replace the `EDIT ME` periods with real dates.
+- `data/social.js` — GitHub and LinkedIn links are filled in from your
+  profile; update if they change.
+- `NEXT_PUBLIC_SITE_URL` in `.env.local` — set this once you have a
+  live domain, so metadata, Open Graph tags, and the sitemap point to
+  the right place.
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/            Routes (App Router): home, about, projects, services, contact
+                + app/api/contact/route.js (Nodemailer endpoint)
+components/     Reusable UI (Navbar, Footer, Button, ContactForm, etc.)
+sections/       Page-level sections composed inside app/ routes
+data/           Editable content: projects, skills, services, experience, social
+public/images/  Your photo and project images
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- Server Components are used by default; only the theme toggle, mobile
+  menu, toast portal, scroll-reveal wrapper, and contact form are
+  Client Components — each is as small as possible.
+- Tailwind CSS v4 is configured CSS-first in `app/globals.css` — there
+  is no `tailwind.config.js`.
+- The light/dark theme is applied via a `data-theme` attribute on
+  `<html>`, set before paint to avoid a flash, and persisted in
+  `localStorage`.

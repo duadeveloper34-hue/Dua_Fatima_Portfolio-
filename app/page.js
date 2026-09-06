@@ -1,17 +1,19 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import Hero from "@/sections/Hero";
+import AboutPreview from "@/sections/AboutPreview";
+import SkillsSection from "@/sections/SkillsSection";
+import ProjectsSection from "@/sections/ProjectsSection";
+import ServicesSection from "@/sections/ServicesSection";
+import ContactCTA from "@/sections/ContactCTA";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <AboutPreview />
+      <SkillsSection />
+      <ProjectsSection />
+      <ServicesSection limit={4} />
+      <ContactCTA />
     </>
   );
 }
