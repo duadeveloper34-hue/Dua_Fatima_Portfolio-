@@ -4,36 +4,43 @@
 
 export const projects = [
   {
-    id: "ai-content-hub",
-    title: "AI Content Hub",
+    id: "Smile-Care-Dental-Clinic",
+    title: "Smile Care Dental Clinic Web App",
     description:
-      "A content-creation dashboard that helps users generate captions, blog ideas, and social posts. Built and deployed as a real, working product.",
-    tags: ["React.js", "JavaScript", "API Integration", "Responsive UI"],
-    image: "/images/projects/ai-content-hub.png",
-    liveUrl: "https://aicontenthub-rho.vercel.app/",
-    githubUrl: "#", // EDIT ME — add the repo link if it's public
+      "A responsive web application for a dental clinic, featuring a clean and user-friendly interface. It includes sections for services, appointments, and contact information, ensuring patients can easily navigate and access the clinic's offerings.",
+    tags: ["React.js", "JavaScript", "API Integration", "Responsive UI", "Tailwind CSS", "Motion.dev"
+      , "React-Router-Dom"
+      , "Lucide Icons"
+      , "React-Icons"],
+    image: "/images/smile-care-dental-clinic.webp",
+    liveUrl: "https://smile-care-dental-clinic-eight.vercel.app/",
+    githubUrl: "https://github.com/murtaza700/SmileCare-Dental-Clinic",
     featured: true,
   },
   {
     id: "ecommerce-storefront",
-    title: "E-Commerce Storefront",
+    title: "R1 Construction - Construction Web App",
     description:
-      "PLACEHOLDER — replace with a real project. A product-listing storefront with cart state, filtering, and a checkout flow UI.",
-    tags: ["React.js", "Next.js", "Tailwind CSS"],
-    image: "/images/projects/placeholder.png",
-    liveUrl: "#",
-    githubUrl: "#",
+      " ",
+    tags: ["React.js", "Next.js", "Tailwind CSS"
+      , "Motion.dev"
+      , "Swiper.js"
+      , "React-Router-Dom"
+      , "Lucide Icons"],
+    image: "/images/r1construction.webp",
+    liveUrl: "https://r1-construction.vercel.app/",
+    githubUrl: "https://github.com/murtaza700/R1Construction",
     featured: false,
   },
   {
     id: "recipe-app",
-    title: "Recipe Application",
+    title: "Amber Kichten",
     description:
-      "PLACEHOLDER — replace with a real project. A searchable recipe browser with saved favorites and a clean, ingredient-first layout.",
+      "A recipe web application that allows users to browse, search, and save their favorite recipes. The app features a clean and intuitive interface, making it easy for users to find and manage their culinary inspirations.",
     tags: ["React.js", "API Integration", "Local Storage"],
-    image: "/images/projects/placeholder.png",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "/images/amberkitchen.webp",
+    liveUrl: "https://amber-kitchen.vercel.app/",
+    githubUrl: "https://github.com/murtaza700/AmberKitchen",
     featured: false,
   },
   {
@@ -41,10 +48,10 @@ export const projects = [
     title: "Task Management App",
     description:
       "PLACEHOLDER — replace with a real project. A drag-friendly task board with persisted state and quick keyboard-first entry.",
-    tags: ["React.js", "State Management", "Local Storage"],
-    image: "/images/projects/placeholder.png",
-    liveUrl: "#",
-    githubUrl: "#",
+    tags: ["React.js", "State Management", "Local Storage", "Tailwind CSS", "React Router DOM"],
+    image: "/images/taskmanagepic.jpeg",
+    liveUrl: "https://taskmanagement-kohl-one.vercel.app/",
+    githubUrl: "https://github.com/duadeveloper34-hue/task.management",
     featured: false,
   },
   {
@@ -58,15 +65,15 @@ export const projects = [
     githubUrl: "#",
     featured: false,
   },
-  {
-    id: "landing-page",
-    title: "Modern Landing Page",
-    description:
-      "PLACEHOLDER — replace with a real project. A conversion-focused marketing landing page with scroll-based motion.",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    image: "/images/projects/placeholder.png",
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-  },
+  // {
+  //   id: "landing-page",
+  //   title: "Modern Landing Page",
+  //   description:
+  //     "PLACEHOLDER — replace with a real project. A conversion-focused marketing landing page with scroll-based motion.",
+  //   tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
+  //   image: "/images/projects/placeholder.png",
+  //   liveUrl: "#",
+  //   githubUrl: "#",
+  //   featured: false,
+  // },
 ];

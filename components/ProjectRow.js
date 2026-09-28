@@ -1,7 +1,7 @@
 import ProjectMedia from "@/components/ProjectMedia";
 import Reveal from "@/components/Reveal";
 
-export default function ProjectRow({ project, index }) {
+export default function ProjectRow({ project, index, ...props }) {
   const reversed = index % 2 === 1;
 
   return (
@@ -12,14 +12,14 @@ export default function ProjectRow({ project, index }) {
         }`}
       >
         <div className={reversed ? "sm:[direction:ltr]" : ""}>
-          <ProjectMedia title={project.title} />
+          <ProjectMedia link={project.image} />
         </div>
 
         <div className={reversed ? "sm:[direction:ltr]" : ""}>
-          <h3 className="font-[family-name:var(--font-display)] text-2xl">
+          <h3 className="font-display text-2xl">
             {project.title}
           </h3>
-          <p className="mt-3 max-w-md text-[var(--text-muted)]">
+          <p className="mt-3 max-w-md text-(--text-muted)">
             {project.description}
           </p>
 
@@ -27,7 +27,7 @@ export default function ProjectRow({ project, index }) {
             {project.tags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-muted)]"
+                className="rounded-full border border-(--border) px-3 py-1 text-xs text-(--text-muted)"
               >
                 {tag}
               </li>
@@ -40,7 +40,7 @@ export default function ProjectRow({ project, index }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-[var(--accent)] underline underline-offset-4"
+                className="font-medium text-(--accent) underline underline-offset-4"
               >
                 Live Demo
               </a>
@@ -50,7 +50,7 @@ export default function ProjectRow({ project, index }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-[var(--accent)] underline underline-offset-4"
+                className="font-medium text-(--accent) underline underline-offset-4"
               >
                 GitHub
               </a>
