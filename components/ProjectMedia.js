@@ -10,7 +10,7 @@ export default function ProjectMedia({ link }) {
       <img
         src={link}
         alt="Project preview"
-        className="h-full w-full rounded-2xl object-full "
+        className="h-full rounded-2xl object-full"
       />
     </div>
   );

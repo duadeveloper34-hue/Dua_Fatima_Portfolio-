@@ -55,14 +55,14 @@ export const projects = [
     featured: false,
   },
   {
-    id: "weather-app",
-    title: "Weather Application",
+    id: "cofee beans website",
+    title: "Cofee Beans website",
     description:
-      "PLACEHOLDER — replace with a real project. A location-based weather lookup with a focus on legible data and quick glanceability.",
+      "A coffee web app is an online platform that lets users browse coffee menus, customize drinks, and place orders directly through a browser",
     tags: ["React.js", "Axios", "REST API"],
-    image: "/images/projects/placeholder.png",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "/images/cofeeapp.jpeg",
+    liveUrl: "https://beans-scene.vercel.app/",
+    githubUrl: "https://github.com/duadeveloper34-hue/Beans-Scene/",
     featured: false,
   },
   // {

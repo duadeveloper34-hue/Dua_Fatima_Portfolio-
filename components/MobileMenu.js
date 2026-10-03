@@ -28,16 +28,16 @@ export default function MobileMenu() {
         onClick={() => setOpen(true)}
         aria-label="Open menu"
         aria-expanded={open}
-        className="flex h-9 w-9 flex-col items-center justify-center gap-[5px]"
+        className="flex h-9 w-9 flex-col items-center justify-center gap-1.25"
       >
-        <span className="h-[1.5px] w-5 bg-[var(--text)]" />
-        <span className="h-[1.5px] w-5 bg-[var(--text)]" />
+        <span className="h-[1.5px] w-5 bg-(--text)" />
+        <span className="h-[1.5px] w-5 bg-(--text)" />
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-[var(--bg)]">
+        <div className="fixed inset-0 z-50 bg-(--bg)">
           <div className="flex items-center justify-between px-6 py-5">
-            <span className="font-[family-name:var(--font-display)] text-lg">
+            <span className="font-display text-lg">
               Dua Fatima
             </span>
             <button
@@ -55,7 +55,7 @@ export default function MobileMenu() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-[var(--border)] py-4 font-[family-name:var(--font-display)] text-3xl"
+                className="border-b border-(--border) py-4 font-display text-3xl"
               >
                 {link.label}
               </Link>

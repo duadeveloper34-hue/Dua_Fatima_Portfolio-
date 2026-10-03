@@ -34,7 +34,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
       aria-pressed={theme === "dark"}
-      className="relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] text-[var(--text)] transition-colors hover:border-[var(--accent)] focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
+      className="relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--border) text-(--text) transition-colors hover:border-(--accent) focus-visible:outline-2 focus-visible:outline-(--accent)"
     >
       {theme === "dark" ? (
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
